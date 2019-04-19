@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
     <meta charset="utf-8">
     <title>title</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
@@ -9,7 +9,7 @@
   </head>
   <body>
     <h1 id="title">title</h1>
-    <p id="description">Let us know how we can improve freeCodeCamp</p>
+    <p id="description">Let us know how you could help</p>
     <form id="survey-form">
       <label id="name-label" for="name">Name:</label>
       <input type="text" id="name" name="name" placeholder="Type your full name" required>
@@ -17,21 +17,25 @@
       <input type="email" id="email" name="email" placeholder="Type your electronic mail" required>
       <label id="number-label" for="number">Age:</label>
       <input type="number" id="number" name="number" min="1" max="125" placeholder="Your age?" required>
-      <select id="dropdown">
-        <option value="volvo">Volvo</option>
-        <option value="saab">Saab</option>
-        <option value="mercedes">Mercedes</option>
-        <option value="audi">Audi</option>
+      <label id="gender-label" for="gender">Gender:</label>
+      <input type="radio" id="dropdown" name="gender" value="male" checked> Male<br>
+      <input type="radio" id="dropdown" name="gender" value="female"> Female<br>
+      <input type="radio" id="dropdown" name="gender" value="other" checked> Other<br>
+      <label id="profile-label" for="profile">Which role do you like:</label>
+      <select id="dropdown" name="profile">
+        <option value="fullstack">Fullstack</option>
+        <option value="frontend">Frontend</option>
+        <option value="backend">Backend</option>
+        <option value="devops">DevOps</option>
+        <option value="quality">QA</option>
       </select>
-      <input type="radio" id="dropdown" name="dropdown" value="male" checked> Male<br>
-      <input type="radio" id="dropdown" name="dropdown" value="female"> Female<br>
-      <input type="radio" id="dropdown" name="dropdown" value="other" checked> Other<br>
-      <input type="checkbox" name="backend" value="backend"> Backend<br>
-      <input type="checkbox" name="frontend" value="frontend"> Frontend<br>
-      <input type="checkbox" name="devops" value="devops"> DevOps<br>
-      <textarea>
-        This is a textarea input
-      </textarea>
+      <label id="techs-label" for="nodejs">What tech do you use:</label>
+      <input type="checkbox" name="nodejs" value="nodejs"> NodeJs<br>
+      <input type="checkbox" name="angular" value="angular"> Angular<br>
+      <input type="checkbox" name="docker" value="docker"> Docker<br>
+      <label id="comment-label" for="comment">Let us any comments:</label>
+      <textarea id="comment" name="comment">Comments and suggestions</textarea>
+      <br>
       <button id="submit" type="submit">Submit</button>
     </form>
   </body>
