@@ -35,9 +35,26 @@
             <option value="quality">QA</option>
           </select>
           <label id="techs-label" for="nodejs">What tech do you use:</label>
-          <input type="checkbox" name="nodejs" value="nodejs"> NodeJs<br>
-          <input type="checkbox" name="angular" value="angular"> Angular<br>
-          <input type="checkbox" name="docker" value="docker"> Docker<br>
+          <div class="row">
+            <div class="one-third column">
+              <input type="checkbox" name="nodejs" value="nodejs"> NodeJs<br>
+              <input type="checkbox" name="angular" value="angular"> Angular<br>
+              <input type="checkbox" name="docker" value="docker"> Docker<br>
+              <input type="checkbox" name="selenium" value="selenium"> Selenium<br>
+            </div>
+            <div class="one-third column">
+              <input type="checkbox" name="python" value="python"> Python<br>
+              <input type="checkbox" name="react" value="react"> React<br>
+              <input type="checkbox" name="postman" value="postman"> Postman<br>
+              <input type="checkbox" name="kubernetes" value="kubernetes"> Kubernetes<br>
+            </div>
+            <div class="one-third column">
+              <input type="checkbox" name="golang" value="golang"> Go<br>
+              <input type="checkbox" name="vue" value="vue"> Vue<br>
+              <input type="checkbox" name="aws" value="aws"> AWS<br>
+              <input type="checkbox" name="git" value="git"> Git*<br>
+            </div>
+          </div>
           <label id="comment-label" for="comment">Let us any comments:</label>
           <textarea class="u-full-width" id="comment" name="comment" placeholder="Comments and suggestions..."></textarea>
           <br>
