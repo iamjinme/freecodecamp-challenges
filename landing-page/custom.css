@@ -8,6 +8,10 @@ header {
   }
 }
 
+#price {
+  display: flex;
+}
+
 .hs-responsive-embed { 
   position: relative; 
 height: 0; 
