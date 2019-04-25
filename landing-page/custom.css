@@ -2,6 +2,12 @@ header {
   position: fixed;
 }
 
+@media (max-width: 600px ){
+  h1 {
+    font-size: 1.20em;
+  }
+}
+
 .hs-responsive-embed { 
   position: relative; 
 height: 0; 
