@@ -1,3 +1,7 @@
+header {
+  position: fixed;
+}
+
 .hs-responsive-embed { 
   position: relative; 
 height: 0; 
