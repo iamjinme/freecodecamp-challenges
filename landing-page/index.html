@@ -11,47 +11,45 @@
   </head>
   <body>
     <header id="header" class="header">
-      <div class="container">
-        <div class="row">
-          <nav id="nav-bar" class="navigation">
-            <a href="#" class="menu-icon">
-              <i class="fa fa-bars"></i>
-            </a>
-            <ul class="main-navigation" role="navigation">
-              <li><img id="header-img" src="https://cdn1.imggmi.com/uploads/2019/4/25/e3196df53956183725775a782547e0d5-full.png"></li>
-              <li><a class="nav-link" href="#food">Food</a></li>
-              <li><a class="nav-link" href="#playground">Playground</a></li>
-              <li><a class="nav-link" href="#health">Health</a></li>
-              <li><a class="nav-link" href="#about">About Us</a></li>
-            </ul>
-          </nav>
-        </div>
+      <div class="logo">
+        <img id="header-img" src="https://cdn1.imggmi.com/uploads/2019/4/25/e3196df53956183725775a782547e0d5-full.png" />
       </div>
+      <nav id="nav-bar" class="navigation">
+        <ul>
+          <li><a class="nav-link" href="#price">Prices</a></li>
+          <li><a class="nav-link" href="#health">Health</a></li>
+          <li><a class="nav-link" href="#playground">Playground</a></li>
+          <li><a class="nav-link" href="#food">Food</a></li>
+        </ul>
+      </nav>
     </header>
-    <div class="container">
+    <section id="contact" class="contact container">
+      <h2>Do you want to know more?</h2>
       <form id="form" action="https://www.freecodecamp.com/email-submit">
         <input type="email" id="email" name="email" placeholder="Please, leave your email" required>
         <input class="button-primary" id="submit" type="submit"></input>
       </form>
+    </section>
+    <div class="container">
       <div id="food">
-        Food
+        <h2>Food</h2>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
       </div>
       <div id="playground">
-        Playground
+        <h2>Playground</h2>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
       </div>
       <div id="health">
-        Healthy
+        <h2>Healthy</h2>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
       </div>
       <div id="price">
-        <div id="daily"></div>
-        <div id="montly"></div>
+        <h2>Prices</h2>
+        <div id="daily">Daily</div>
+        <div id="montly">Montly</div>
       </div>
-      <div id="about">
-        About Us
-        <div class="hs-responsive-embed-youtube">
-          <iframe id="video" src="https://www.youtube.com/embed/WppPC-VALWQ">
-          </iframe>
-        </div>
+      <div class="hs-responsive-embed-youtube">
+        <iframe id="video" src="https://www.youtube.com/embed/WppPC-VALWQ"></iframe>
       </div>
     </div>
   </body>
