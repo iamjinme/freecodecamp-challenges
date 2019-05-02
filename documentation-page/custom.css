@@ -41,3 +41,9 @@ code {
   font-family: monospace;
   white-space: pre;
 }
+
+@media (max-width: 600px ){
+  h1 {
+    font-size: 1.20em;
+  }
+}
