@@ -14,7 +14,9 @@ nav {
 #main-doc {
   margin-left: 25%;
   padding: 1px 16px;
-  height: 1000px;
+  height: 100%;
+  background-color: #E9C4A7;
+  color: #1A1D2B;
 }
 
 ul {
