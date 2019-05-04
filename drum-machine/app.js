@@ -1,7 +1,7 @@
 class Display extends React.Component {
   render() {
     return(
-      <div>Drum Machine!</div>
+      <div id="display">Drum Machine!</div>
     )
   }
 }
