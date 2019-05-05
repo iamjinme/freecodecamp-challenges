@@ -1,22 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald|Roboto');
+
 body {
   margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #D4AA7D;
 }
 
 nav {
   margin: 0;
   padding: 0;
-  width: 25%;
+  width: 20%;
   position: fixed;
   height: 100%;
   overflow: auto;
 }
 
-#main-doc {
-  margin-left: 25%;
-  padding: 1px 16px;
-  height: 100%;
-  background-color: #E9C4A7;
-  color: #1A1D2B;
+h2 {
+  font-family: 'Oswald', sans-serif;
 }
 
 ul {
@@ -27,16 +27,18 @@ li a {
   display: block;
   padding: 8px 16px;
   text-decoration: none;
+  color: #F7F0F5;
+  font-weight: bold;
 }
 
 li a.active {
   background-color: #4CAF50;
-  color: white;
+  color: #F7F0F5;
 }
 
 li a:hover:not(active) {
   background-color: #555;
-  color: white;
+  color: #F7F0F5;
 }
 
 pre {
@@ -50,10 +52,28 @@ pre {
 code {
   font-family: Courier, 'New Courier', monospace;
   font-size: 12px;
+  color: #32746D;
+  font-weight: bold;
 }
 
-@media (max-width: 600px ){
-  h1 {
-    font-size: 1.20em;
+@media (max-width: 800px ){
+  .main-title {
+    font-size: 25px;
   }
+}
+
+.main-title {
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+  color: #104F55;
+  font-size: 40px;
+  padding: 5px 0 5px 0;
+}
+
+#main-doc {
+  margin-left: 20%;
+  padding: 1px 16px;
+  height: 100%;
+  background-color: #32746D;
+  color: #F7F0F5;
 }

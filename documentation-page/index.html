@@ -12,9 +12,10 @@
 <body>
   <nav id="navbar">
     <header>
-      <h1>Easy Javascript</h1>
+      <h1 class="main-title">Easy Javascript</h1>
     </header>
     <ul>
+      <li><a class="nav-link" href="#whats_javascript">Whats Javascript</a></li>
       <li><a class="nav-link" href="#variables">Variables</a></li>
       <li><a class="nav-link" href="#conditionals">Conditionals</a></li>
       <li><a class="nav-link" href="#loops">Loops</a></li>
@@ -23,16 +24,21 @@
     </ul>
   </nav>
   <main id="main-doc">
+    <section id="whats_javascript" class="main-section">
+      <header><h2>Whats Javascript</h2></header>
+      <p>JavaScript was introduced in 1995 as a way to add programs to web pages in the Netscape Navigator browser. The language has since been adopted by all other major graphical web browsers. It has made modern web applications possible applications with which you can interact directly without doing a page reload for every action. JavaScript is also used in more traditional websites to provide various forms of interactivity and cleverness.</p>
+      <p>This tutorial contains at present five parts. These chapters discuss the minimum parts to learn JavaScript language.</p>
+    </section>
     <section id="variables" class="main-section">
-      <header>Variables</header>
-      <h3>Variables types</h3>
-      <ul>
-        <li>Boolean</li>
-        <li>Numeric</li>
-        <li>String</li>
-        <li>Array</li>
-        <li>Object</li>
-      </ul>
+      <header><h2>Variables</h2></header>
+      <h4>Variables types</h4>
+      <ol>
+        <li>Boolean: true/false</li>
+        <li>Numeric: 9, 8.3, -43</li>
+        <li>String: "I'm string"</li>
+        <li>Array: [ 23, "string", true, -2 ]</li>
+        <li>Object: { key: value }</li>
+      </ol>
       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
       <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
       <pre><code>
@@ -44,7 +50,7 @@ var z = x + y;
       </code></pre>
     </section>
     <section id="conditionals" class="main-section">
-      <header>Conditionals</header>
+      <header><h2>Conditionals</h2></header>
       <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
       <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
       <pre><code>
@@ -58,7 +64,7 @@ if (time < 10) {
       </code></pre>
     </section>
     <section id="loops" class="main-section">
-      <header>Loops</header>
+      <header><h2>Loops</h2></header>
       <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
       <p>The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
       <pre><code>
@@ -68,7 +74,7 @@ for (i = 0; i < 5; i++) {
       </code></pre>
     </section>
     <section id="arrays" class="main-section">
-      <header>Arrays</header>
+      <header><h2>Arrays</h2></header>
       <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.</p>
       <p>Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
       <pre><code>
@@ -77,7 +83,7 @@ var name = cars[0];
       </code></pre>
     </section>
     <section id="functions" class="main-section">
-      <header>Functions</header>
+      <header><h2>Functions</h2></header>
       <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
       <p> If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
       <pre><code>
