@@ -31,6 +31,9 @@
     </section>
     <section id="variables" class="main-section">
       <header><h2>Variables</h2></header>
+      <p>To be able to work with such quantities of bits without getting lost, we must separate them into chunks that represent pieces of information. In a JavaScript environment, those chunks are called values. Though all values are made of bits, they play different roles. Every value has a type that determines its role. Some values are numbers, some values are pieces of text, some values are functions, and so on.</p>
+      <p>To create a value, you must merely invoke its name. This is convenient. You don’t have to gather building material for your values or pay for them. You just call for one, and whoosh, you have it. They are not really created from thin air, of course. Every value has to be stored somewhere, and if you want to use a gigantic amount of them at the same time, you might run out of memory. Fortunately, this is a problem only if you need them all simultaneously. As soon as you no longer use a value, it will dissipate, leaving behind its bits to be recycled as building material for the next generation of values.</p>
+      <p>This chapter introduces the atomic elements of JavaScript programs, that is, the simple value types and the operators that can act on such values.</p>
       <h4>Variables types</h4>
       <ol>
         <li>Boolean: true/false</li>
@@ -38,9 +41,8 @@
         <li>String: "I'm string"</li>
         <li>Array: [ 23, "string", true, -2 ]</li>
         <li>Object: { key: value }</li>
+        <li>Undefined: null</li>
       </ol>
-      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-      <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
       <pre><code>
 var pi = 3.14;
 var person = "John Doe";
@@ -48,11 +50,13 @@ var x = 5;
 var y = 6;
 var z = x + y;
       </code></pre>
+      <p>We looked at six types of JavaScript values in this chapter: numbers, strings, Booleans, Arrays, Objects and undefined values.</p>
+      <p>Such values are created by typing in their name ( true , null ) or value ( 13, "abc" ). You can combine and transform values with operators. We saw binary operators for arithmetic ( + , - , * , / , and % ), string concatenation ( + ), comparison ( == , != , === , !== , < , > , <= , >= ), and logic ( && , || ), as well as several unary operators ( - to negate a number, ! to negate logically, and typeof to find a value’s type) and a ternary operator ( ?: ) to pick one of two values based on a third value.</p>
     </section>
     <section id="conditionals" class="main-section">
       <header><h2>Conditionals</h2></header>
-      <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-      <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+      <p>Not all programs are straight roads. We may, for example, want to create a branching road, where the program takes the proper branch based on the situation at hand. This is called conditional execution.</p>
+      <p>Conditional execution is created with the if keyword in JavaScript. In the simple case, we want some code to be executed if, and only if, a certain condition holds. We might, for example, want to show "Good morning" if the input is less than 10 number.</p>
       <pre><code>
 if (time < 10) {
   greeting = "Good morning";
@@ -62,36 +66,51 @@ if (time < 10) {
   greeting = "Good evening";
 }
       </code></pre>
+      <p>If the second condition ( < 20 ) holds, that means the number is between 10 and 20, and "Good day" is shown. If it doesn’t, the second and last else branch is chosen.</p>
     </section>
     <section id="loops" class="main-section">
       <header><h2>Loops</h2></header>
-      <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
-      <p>The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+      <p>Many loops follow the pattern shown in the while examples. First a “counter” binding is created to track the progress of the loop. Then comes a while loop, usually with a test expression that checks whether the counter has reached its end value. At the end of the loop body, the counter is updated to track progress.</p>
+      <p>Because this pattern is so common, JavaScript and similar languages provide a slightly shorter and more comprehensive form, the for loop.</p>
       <pre><code>
-for (i = 0; i < 5; i++) {
-  text += "The number is " + i + "<br>";
+for (let number = 0; number <= 12; number = number + 2) {
+  console.log(number);
 }
+// → 0
+// → 2
+// ...
+etcetera
       </code></pre>
+      <p>This program is exactly equivalent to the earlier even-number-printing example. The only change is that all the statements that are related to the “state” of the loop are grouped together after for.</p>
+      <p>The parentheses after a for keyword must contain two semicolons. The part before the first semicolon initializes the loop, usually by defining a binding. The second part is the expression that checks whether the loop must continue. The final part updates the state of the loop after every iteration. In most cases, this is shorter and clearer than a while construct.</p>
     </section>
     <section id="arrays" class="main-section">
       <header><h2>Arrays</h2></header>
-      <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.</p>
-      <p>Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+      <p>To work with a chunk of digital data, we’ll first have to find a way to represent it in our machine’s memory. Say, for example, that we want to represent a collection of the numbers 2, 3, 5, 7, and 11.</p>
+      <p>We could get creative with strings—after all, strings can have any length, so we can put a lot of data into them—and use "2 3 5 7 11" as our representation. But this is awkward. You’d have to somehow extract the digits and convert them back to numbers to access them.</p>
+      <p>Fortunately, JavaScript provides a data type specifically for storing sequences of values. It is called an array and is written as a list of values between square brackets, separated by commas.</p>
       <pre><code>
-var cars = new Array("Saab", "Volvo", "BMW");
-var name = cars[0];
+let listOfNumbers = [2, 3, 5, 7, 11];
+console.log(listOfNumbers[2]);
+
+const cars = new Array("Saab", "Volvo", "BMW");
+const name = cars[0];
       </code></pre>
+      <p>The notation for getting at the elements inside an array also uses square brackets. A pair of square brackets immediately after an expression, with another expression inside of them, will look up the element in the left-hand expression that corresponds to the index given by the expression in the brackets.</p>
+      <p>The first index of an array is zero, not one. So the first element is retrieved with listOfNumbers[0] . Zero-based counting has a long tradition in technology and in certain ways makes a lot of sense, but it takes some getting used to. Think of the index as the amount of items to skip, counting from the start of the array.</p>
     </section>
     <section id="functions" class="main-section">
       <header><h2>Functions</h2></header>
-      <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
-      <p> If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
+      <p>Functions are the bread and butter of JavaScript programming. The concept of wrapping a piece of program in a value has many uses. It gives us a way to structure larger programs, to reduce repetition, to associate names with subprograms, and to isolate these subprograms from each other.</p>
+      <p>The most obvious application of functions is defining new vocabulary. Creating new words in prose is usually bad style. But in programming, it is indispensable.</p>
+      <p>A function definition is a regular binding where the value of the binding is a function. For example, this code converts fahrenheit degrees to refer to a function that produces the celsius degrees of a given number:</p>
       <pre><code>
 var celsius = toCelsius(49); 
 function toCelsius(fahrenheit) {
   return (5/9) * (fahrenheit-32);
 }
       </code></pre>
+      <p>A function is created with an expression that starts with the keyword function. Functions have a set of parameters (in this case, only x ) and a body, which contains the statements that are to be executed when the function is called. The function body of a function created this way must always be wrapped in braces, even when it consists of only a single statement.</p>
     </section>
   </main>
 </body>
