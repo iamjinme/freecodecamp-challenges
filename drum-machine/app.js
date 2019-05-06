@@ -1,7 +1,15 @@
+class Button extends React.Component {
+  render() {
+    return(
+      <button>B</button>
+    )
+  }
+}
+
 class Display extends React.Component {
   render() {
     return(
-      <div id="display">Drum Machine!</div>
+      <p id="display">Drum Machine!</p>
     )
   }
 }

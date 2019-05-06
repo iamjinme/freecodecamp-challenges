@@ -1,15 +1,36 @@
 @import url('https://fonts.googleapis.com/css?family=Gugi');
 
+/* Palette
+ * #585252
+ * #231a18
+ * #4c1b16
+ * #794b49
+ * #b2797b
+ * #d5d1e7
+ */
+
 * {
   margin: 0;
 }
 
 body {
   font-family: 'Gugi', cursive;
+  color: #d5d1e7;
 }
 
 #root {
   display: flex;
   background-color: #D4AA7D;
   height: 100vh;
+}
+
+#drum-machine {
+  border: 5px solid #d5d1e7;
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  background-color: #4c1b16;
 }
