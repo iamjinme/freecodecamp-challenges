@@ -37,8 +37,10 @@ body {
 
 .drum-pad {
   height: 60px;
+  border: 1px solid #585252;
+  border-radius: 5px;
+  background-color: #585252;
+  color: #fff;
 }
 
-.clip {
-
-}
+.clip {}
