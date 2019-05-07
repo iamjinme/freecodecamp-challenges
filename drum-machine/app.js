@@ -40,7 +40,9 @@ const pads = [
 class Button extends React.Component {  
   render() {
     return(
-      <button type="button" class="drum-pad" id={this.props.pad.id}>{this.props.pad.text}</button>
+      <button type="button" class="drum-pad" id={this.props.pad.id}>{this.props.pad.text}
+        <audio class="clip" src="#" id={this.props.pad.text} />
+      </button>
     )
   }
 }
