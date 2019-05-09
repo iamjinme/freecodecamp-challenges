@@ -50,6 +50,18 @@ class Button extends React.Component {
   constructor(props) {
     super(props);
     this.play = this.play.bind(this);
+    this.handleKeyPress = this.handleKeyPress.bind(this);
+  }
+  handleKeyPress(e) {
+    if(e.key === this.props.pad.text) {
+      this.play();
+    }
+  }
+  componentDidMount() {
+    document.addEventListener("keydown", this.handleKeyPress, false)
+  }
+  componentWillUnmount() {
+    document.removeEventListener("keydown", this.handleKeyPress, false)
   }
   play() {
     const sound = document.getElementById(this.props.pad.text);
