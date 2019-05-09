@@ -46,11 +46,19 @@ const pads = [
   }
 ]
 
-class Button extends React.Component {  
+class Button extends React.Component {
+  constructor(props) {
+    super(props);
+    this.play = this.play.bind(this);
+  }
+  play() {
+    const sound = document.getElementById(this.props.pad.text);
+    sound.play();
+  }
   render() {
     return(
-      <button type="button" class="drum-pad" id={this.props.pad.id}>{this.props.pad.text}
-        <audio class="clip" src="#" id={this.props.pad.text} />
+      <button onClick={this.play} type="button" class="drum-pad" id={this.props.pad.id}>{this.props.pad.text}
+        <audio class="clip" src={this.props.pad.url} id={this.props.pad.text} />
       </button>
     )
   }
