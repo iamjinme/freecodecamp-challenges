@@ -65,6 +65,7 @@ class Button extends React.Component {
   }
   play() {
     const sound = document.getElementById(this.props.pad.text);
+    document.getElementById("display").innerHTML = this.props.pad.id;
     sound.play();
   }
   render() {
