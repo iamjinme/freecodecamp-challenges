@@ -11,15 +11,14 @@
 
 * {
   margin: 0;
+  font-family: 'Gugi', cursive;
 }
 
 body {
-  font-family: 'Gugi', cursive;
   color: #d5d1e7;
 }
 
 #root {
-  display: flex;
   background-color: #D4AA7D;
   height: 100vh;
 }
@@ -33,6 +32,19 @@ body {
   transform: translate(-50%, -50%);
   width: 600px;
   background-color: #4c1b16;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 20px;
+  padding: 20px;
+}
+
+#display {
+  grid-area: 1 / 4 / 1 / 7;
+  font-size: 2rem;
+  border: none;
+  text-align: center;
+  padding-right: 20px;
+  padding-top: 10px;
 }
 
 .drum-pad {
@@ -41,6 +53,7 @@ body {
   border-radius: 5px;
   background-color: #585252;
   color: #fff;
+  font-size: 2rem;
 }
 
 .clip {}
