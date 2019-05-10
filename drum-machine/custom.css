@@ -39,12 +39,40 @@ body {
 }
 
 #display {
-  grid-area: 1 / 4 / 1 / 7;
   font-size: 2rem;
   border: none;
   text-align: center;
   padding-right: 20px;
   padding-top: 10px;
+}
+
+#slider {
+  -webkit-appearance: none;
+  width: 100%;
+  border-radius: 5px;   
+  background: #585252;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+#slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%; 
+  background: #d5d1e7;
+  cursor: pointer;
+}
+
+#slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #4CAF50;
+  cursor: pointer;
 }
 
 .drum-pad {
