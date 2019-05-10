@@ -100,7 +100,7 @@ class Switch extends React.Component {
     return (
       <label class="switch">
         <input type="checkbox" />
-        <span class="slider"></span>
+        <span class="slider round"></span>
       </label>
     )
   }
