@@ -85,11 +85,22 @@ class Display extends React.Component {
   }
 }
 
+class Slider extends React.Component {
+  render() {
+    return(
+      <div class="slidecontainer">
+        <input type="range" min="1" max="100" value="50" id="slider" />
+      </div>
+    )
+  }
+}
+
 class App extends React.Component {
   render() {
     return(
       <div id="drum-machine">
         <Display />
+        <Slider />
         { pads.map((pad) => {
           return(
             <Button key={pad.text} pad={pad}/>
