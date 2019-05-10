@@ -95,12 +95,24 @@ class Slider extends React.Component {
   }
 }
 
+class Switch extends React.Component {
+  render() {
+    return (
+      <label class="switch">
+        <input type="checkbox" />
+        <span class="slider"></span>
+      </label>
+    )
+  }
+}
+
 class App extends React.Component {
   render() {
     return(
       <div id="drum-machine">
         <Display />
         <Slider />
+        <Switch />
         { pads.map((pad) => {
           return(
             <Button key={pad.text} pad={pad}/>
