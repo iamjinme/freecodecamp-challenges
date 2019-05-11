@@ -89,7 +89,12 @@ class Slider extends React.Component {
   render() {
     return(
       <div class="slidecontainer">
-        <input type="range" min="1" max="100" value="50" id="slider" />
+        <input 
+          type="range" 
+          min="1" 
+          max="100" 
+          defaultValue="50"
+          class="slider" />
       </div>
     )
   }
@@ -98,9 +103,9 @@ class Slider extends React.Component {
 class Switch extends React.Component {
   render() {
     return (
-      <label class="switch">
+      <label class="container-switch">
         <input type="checkbox" />
-        <span class="slider round"></span>
+        <span class="switch round"></span>
       </label>
     )
   }
