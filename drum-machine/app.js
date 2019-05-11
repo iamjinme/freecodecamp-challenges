@@ -110,14 +110,14 @@ class App extends React.Component {
   render() {
     return(
       <div id="drum-machine">
-        <Display />
-        <Slider />
-        <Switch />
         { pads.map((pad) => {
           return(
             <Button key={pad.text} pad={pad}/>
           );
         })}
+        <Slider />
+        <Display />
+        <Switch />
       </div>
     )    
   }
